@@ -1,0 +1,28 @@
+<!--pages/login/login.wxml-->
+<import src="../template/template.wxml"/>
+<view class="container">
+  
+  <view class="join_banner">
+    <image src="https://hepulan.playonwechat.com/static/join_banner.png" />
+  </view>
+
+  <view class="join_suit">
+    <view class="product_item"  
+          bindtap="applyBtn"  
+          data-smpid="{{item.smp_id}}"  
+          wx:for="{{productList}}">
+
+       <view class="product_img">
+          <image src="{{item.img}}"></image>
+      </view>
+
+       <view class="product_info">
+          <view class="product_title">{{item.prod_name}}</view>
+          <view class="product_eng">{{item.description}}</view>
+          <view class="apply_btn">{{item.btn}}</view>
+       </view>
+    </view>
+  </view>
+
+  <template is="share_icon"/>
+</view>

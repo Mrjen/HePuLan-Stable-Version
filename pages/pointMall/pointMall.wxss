@@ -1,0 +1,491 @@
+/* pages/pointMall/pointMall.wxss */
+@import "../template/template.wxss";
+
+view{
+  box-sizing: border-box;
+}
+
+page{
+   background: #f4f5f9;
+   background-image: url(https://qncdn.playonwechat.com/hepulan/point_mall_topbg.png);
+   background-size: 750rpx 476rpx;
+   background-repeat: no-repeat;
+}
+
+.avatarUrl{
+  width: 136rpx;
+  height: 136rpx;
+  border-radius: 50%;
+  display: block;
+  margin:0 auto;
+  margin-top: 120rpx;
+}
+
+.nickName{
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}
+
+.point_count{
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.point_detail{
+  width: 280rpx;
+  height: 62rpx;
+  margin:0 auto;
+  box-sizing: content-box;
+  border:6rpx solid rgba(255,255,255,.9);
+  background: #83dab0;
+  border-radius: 40rpx;
+  line-height: 58rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+  margin-top: 18rpx;
+  margin-bottom: 10rpx;
+}
+
+.invate_btn{
+  width: 45rpx;
+  height: 45rpx;
+  position: absolute;
+  right: 90rpx;
+  top: 20rpx;
+  background: url(data:image/png;base64,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);
+  background-size: 100% 100%;
+}
+
+.invate{
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.opation_nav{
+  display: flex;
+  border-top: 20rpx solid #f4f5f9;
+}
+
+.opation_nav .navigator{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 122rpx;
+  background: #fff;
+  justify-content: center;
+  position: relative;
+  font-size: 30rpx;
+}
+
+.opation_nav .navigator:nth-of-type(1)::before{
+  content: " ";
+  position: absolute;
+  height: 40rpx;
+  right: 0;
+  top: 50%;
+  margin-top: -20rpx;
+  border-right: 1px solid #333;
+}
+
+.opation_nav .navigator:nth-of-type(2)::before{
+  content: " ";
+  position: absolute;
+  height: 40rpx;
+  right: 0;
+  top: 50%;
+  margin-top: -20rpx;
+  border-right: 1px solid #333;
+}
+
+.opation_nav .navigator text{
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+/*.opation_nav navigator:nth-of-type(1) text{
+   background-image: url(https://qncdn.playonwechat.com/hupulan/shopMall/point_mall_collect.png);
+   background-size: 100%;
+}
+
+.opation_nav navigator:nth-of-type(2) text{
+   background-image: url(https://qncdn.playonwechat.com/hupulan/shopMall/point_mall_shopcar.png);
+   background-size: 100%;
+}
+
+.opation_nav navigator:nth-of-type(3) text{
+   background-image: url(https://qncdn.playonwechat.com/hupulan/shopMall/point_mall_adress.png);
+   background-size: 100%;
+}*/
+
+/*轮播列表*/
+.swiper{
+   width: 100%;
+   height: 80rpx;
+   background: #83dab0;
+   color: #fff;
+}
+
+.swiper swiper{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper swiper swiper-item{
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+
+.text_item{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+
+/*商品列表*/
+.shop_list{
+  background: #fff;
+}
+
+.item_img{
+  width: 242rpx;
+  height: 154rpx;
+  display: block;
+  border-radius: 12rpx;
+  margin-right: 30rpx;
+  flex-shrink: 0;
+}
+
+.list_item{
+  display: flex;
+  padding:20rpx;
+  position: relative;
+}
+
+.list_item::before{
+  content: " ";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e9e9e9;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: scaleY(.5);
+  transform-origin: 0 0;
+}
+
+.item_title{
+  width: 100%;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.item_jifen{
+  font-size: 28rpx;
+  color: #ff3c3c;
+  width: 200rpx;
+  margin-bottom: 20rpx;
+}
+
+.item_zan{
+  font-size: 26rpx;
+  color: #3e3e3e;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+}
+
+.zan_icon{
+  display: block;
+  width: 26rpx;
+  height: 23rpx;
+  background: url(https://qncdn.playonwechat.com/hepulan/point_mall_hert.png);
+  background-size: 100% 100%;
+  margin-left: 10rpx;
+}
+
+.soon_tip{
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.item_info{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 438rpx;
+}
+
+.item_bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.exchange_num{
+  font-size: 26rpx;
+  color: #434343;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+
+.zan_hert{
+  display: block;
+  width: 48rpx;
+  height: 48rpx;
+  background: #ff8400;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20rpx;
+  top:20rpx;
+}
+
+.zan_box{
+   background: transparent;
+}
+
+.zan_hert image{
+  width: 27rpx;
+  height: 24rpx;
+}
+
+.exchange_btn{
+  width: 150rpx;
+  height: 48rpx;
+  border-radius: 30rpx;
+  background: #ff3c3c;
+  text-align: center;
+  line-height: 48rpx;
+  font-size: 28rpx;
+  color: #fff;
+  position: relative;
+}
+
+.zan_num{
+  margin-top: 60rpx;
+  background:#f7f7f7;
+  border-radius: 4rpx;
+}
+
+.zan_num .text_bg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.zan_num .text_precent{
+    display: block;
+    height: 100%;
+    background:#ff3c3c;
+    position: absolute;
+    border-radius: 4rpx;
+    z-index: 1;
+}
+
+.has_exchange_btn{
+  background: #999;
+}
+
+.exchange_box{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+.item_type{
+  font-size: 28rpx;
+  width: 200rpx;
+  margin-bottom: 30rpx;
+}
+
+.has_salse:after{
+   content: "";
+   width:242rpx;
+   height:154rpx;
+   position: absolute;
+   background: url(https://qncdn.playonwechat.com/hepulan/point_shop_outsale.png);
+   background-size: 140rpx 140rpx;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color:rgba(0,0,0,.2);
+   left: 20rpx;
+   top: 20rpx;
+   border-radius: 12rpx;
+}
+
+/* 选择款 */
+.select_win{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.product_info{
+  width: 100%;
+  height: 680rpx;
+  background: #fff;
+  padding-top: 40rpx;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product image{
+  display: block;
+  width: 240rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+  border-radius: 8rpx;
+}
+
+.product{
+  display: flex;
+
+}
+
+.top_info{
+  padding:0 30rpx;
+  box-sizing: border-box;
+}
+
+.product .info view:nth-of-type(1){
+   font-size: 30rpx;
+   color: #48a86c;
+   margin-bottom: 14rpx;
+}
+
+.product .info view:nth-of-type(2){
+   font-size: 30rpx;
+   margin-bottom: 14rpx;
+}
+
+.product .info view:nth-of-type(3){
+   font-size: 30rpx;
+}
+
+.type_tag{
+  display: block;
+  font-size: 32rpx;
+  padding:20rpx 0;
+  width: 750rpx;
+}
+
+.product_type .type_item{
+  width: 194rpx;
+  height: 48rpx;
+  border:1px solid #efefef;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 48rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.product_type .type_item.type_active{
+  border:1px solid #48a86c;
+}
+
+.product_type{
+  display: flex;
+  width: 750rpx;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.sure_type{
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background: #48a86c;
+  color: #fff;
+}
+
+
+.close_select{
+  color: #000;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 0;
+  right: 40rpx;
+  top: 40rpx;
+  width: 21px;
+  height: 21px;
+}
+
+.close_select:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 21px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.close_select:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 21px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+
+/*列表标题*/
+.nav_tip{
+  width: 100%;
+  text-align: center;
+  padding: 20rpx;
+  font-size: 32rpx;
+  border-top: 20rpx solid #f7f7f7;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  box-sizing: border-box;
+}
+
+.nav_tip image{
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  position: relative;
+  overflow: auto;
+}
+
+.nav_tip .line{
+  display: block;
+  width: 80rpx;
+  height: 1px;
+  background:#444;
+  margin:0 20rpx;
+}
+

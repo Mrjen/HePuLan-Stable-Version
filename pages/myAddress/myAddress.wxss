@@ -1,0 +1,121 @@
+/* pages/sureExchange/sureExchange.wxss */
+@import "../template/template.wxss";
+
+page{
+    background: #f7f7f7;
+}
+
+.nav{
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 30rpx;
+}
+
+.nav navigator{
+    display: block;
+    width: 150rpx;
+    height: 90rpx;
+    color: #0f622e;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 26rpx;
+}
+
+.select_address,.submit_address{
+    width: 700rpx;
+    margin:30rpx;
+}
+
+.submit_address{
+  margin: 0;
+  margin-top:100rpx;
+}
+
+.address_box{
+    width: 100%;
+    padding:20rpx 30rpx;
+    box-sizing: border-box;
+}
+
+.address_item{
+    box-sizing: border-box;
+    background:#fff;
+    width: 100%;
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+    height: 90rpx;
+    position: relative;
+}
+
+.address_item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    transform: translateY(.5);
+    transform-origin: 0 0;
+
+}
+
+.address_item text{
+    display: block;
+    width: 150rpx;
+}
+
+.address_item input{
+    display: block;
+    flex: 1;
+}
+
+.address_tip{
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 30rpx;
+}
+
+.add_address{
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    padding:0 30rpx;
+    margin: 20rpx 0;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.add_address image{
+    width: 34rpx;
+    height: 34rpx;
+    display: block;
+    margin-right: 10rpx;
+}
+
+.address_list{
+    width: 100%;
+    padding:20rpx;
+    background: #fff;
+    font-size: 30rpx;
+    line-height: 44rpx;
+    box-sizing: border-box;
+}
+
+.list_item view:nth-of-type(1){
+    margin-bottom:20rpx;
+} 
+
+.list_item view:nth-of-type(2) text{
+    display: inline-block;
+    margin-right: 20rpx;
+}

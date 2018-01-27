@@ -1,0 +1,117 @@
+/* pages/login/login.wxss */
+.container{
+	padding:0;
+	margin:0;
+	position: absolute;
+	justify-content:initial;
+	width: 100%;
+	height: 100%;
+	background: #f7f7f7;
+}
+
+.banner{
+	width: 750rpx;
+}
+
+.getphone image{
+   display: block;
+   width: 60rpx;
+   height: 49rpx;
+   margin-right: 20rpx;
+}
+
+.birthday1:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	border-bottom: 1px solid #f7f7f7;
+	left:0;
+	bottom: 0;
+}
+
+.getphone{
+	width: 690rpx;
+	height: 88rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #09bb07;
+	color: #fff;
+	margin: 80rpx auto;
+}
+
+.birthday{
+	width: 750rpx;
+	height: 88rpx;
+	align-items: center;
+	display: flex;
+	background: #fff;
+	box-sizing: border-box;
+	padding:0 30rpx;
+	font-size: 30rpx;
+	position: relative;
+}
+
+.birthday picker{
+	flex: 1;
+	height: 88rpx;
+	line-height: 88rpx;
+	text-align: right;
+}
+
+.birthday text{
+	flex-shrink: 0;
+}
+
+.birthday1 view{
+	width: 100%;
+	text-align: right;
+}
+
+.phone_input{
+	box-sizing: border-box;
+	padding-left: 30rpx;
+}
+
+.tip{
+	font-size: 26rpx;
+	color: #999;
+	line-height: 40rpx;
+	text-align: center;
+	width: 750rpx;
+	box-sizing: border-box;
+	padding:10rpx 30rpx;
+}
+
+.login{
+	width: 690rpx;
+	height: 88rpx;
+	color: #fff;
+	background: #09bb07;
+	margin-top: 30rpx;
+}
+
+.phone input{
+	flex: 1;
+	height: 88rpx;
+	box-sizing: border-box;
+}
+
+.phone .birthday .verify_code{
+	width: 160rpx;
+	height: 88rpx;
+	font-size: 26rpx;
+	text-align: center;
+	line-height: 88rpx;
+	box-sizing: border-box;
+	border-left: 1px solid #f7f7f7;
+}
+
+.phone_login{
+	font-size: 26rpx;
+	position: fixed;
+	bottom: 150rpx;
+	width: 100%;
+	text-align: center;
+}

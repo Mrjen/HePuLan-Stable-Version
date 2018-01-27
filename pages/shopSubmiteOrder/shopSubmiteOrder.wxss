@@ -1,0 +1,545 @@
+/* pages/shopSubmiteOrder/shopSubmiteOrder.wxss */
+page{
+	background: #f7f7f7;
+}
+
+.to_home{
+	width: 100%;
+	height: 70rpx;
+	background:#fff;
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	text-align: center;
+	line-height: 70rpx;
+	font-size: 30rpx;
+	color: #999;
+	margin-bottom: 20rpx;
+}
+
+view{
+	box-sizing: border-box;
+}
+
+.persion_info{
+	background: #fff;
+	position: relative;
+}
+
+.persion_info image{
+	width: 50rpx;
+	height: 50rpx;
+	margin-right: 10rpx;
+  flex-shrink: 0;
+}
+
+.persion_info text{
+	font-size: 28rpx;
+}
+
+.info{
+	display: flex;
+	height: 70rpx;
+	align-items: center;
+	padding: 0 20rpx;
+  margin-bottom: 16rpx;
+}
+
+.info view{
+	flex:1;
+	display: flex;
+	align-items: center;
+}
+
+.address{
+	width: 100%;
+	height: 70rpx;
+	padding:0 20rpx;
+	display: flex;
+	align-items: center;
+}
+
+.persion_info:before{
+  content: '';
+  position: absolute;
+  color: #888;
+  top: 50%;
+  right: 30rpx;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/*商品列表*/
+.product_list{
+	margin-top: 20rpx;
+}
+
+.list_item image{
+   display: flex;
+   width: 242rpx;
+   height: 154rpx;
+   border-radius: 6rpx;
+   margin-right: 20rpx;
+}
+
+.list_item{
+	display: flex;
+	padding:20rpx;
+	background: #fff;
+	font-size: 30rpx;
+	position: relative;
+}
+
+.list_item:last-of-type:before{
+    display: none;
+}
+
+.list_right{
+	flex: 1;
+}
+
+.list_right view:nth-of-type(1){
+	margin-bottom: 14rpx;
+}
+
+.list_right view:nth-of-type(2){
+	font-size: 28rpx;
+	margin-bottom: 14rpx;
+	color: #666;
+}
+
+.list_right view:nth-of-type(3){
+	text-align: right;
+}
+
+
+/*底部导航*/
+.bottom_nav{
+	display: flex;
+	width: 100%;
+	height: 100rpx;
+	background: #fff;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 30rpx;
+	z-index: 100;
+}
+
+.submite{
+	width: 200rpx;
+	height: 100rpx;
+	background: #0f622e;
+	color: #fff;
+	line-height: 100rpx;
+	text-align: center;
+	font-size: 30rpx;
+	margin-left: 20rpx;
+}
+
+/*弹窗*/
+.order_win{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	position: fixed;
+	left: 0;
+	top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:100;
+}
+
+.win_in{
+	width: 563rpx;
+	height: 814rpx;
+	background:#fff;
+	border-radius: 20rpx;
+}
+
+.win_in view{
+	text-align: center;
+}
+
+.win_in .tip{
+	margin:18rpx 0;
+}
+
+.win_in view:nth-of-type(1){
+	text-align: center;
+	font-size: 76rpx;
+	padding:20rpx;
+	color: #4a9e67;
+	margin-top: 84rpx;
+	margin-bottom: 40rpx;
+}
+
+.win_in image{
+	width: 200rpx;
+	display: block;
+	margin: 40rpx auto;
+}
+
+.sure_btn{
+	width:415rpx;
+	height: 70rpx;
+	text-align: center;
+	line-height: 70rpx;
+	background: #50a76f;
+	color: #fff;
+	margin:0 auto;
+	font-size: 30rpx;
+	border-radius: 40rpx;
+}
+
+/* 红包抵扣窗口 */
+.coupon_bar{
+	width: 100%;
+	height: 80rpx;
+	line-height: 80rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	font-size: 25rpx;
+	position: fixed;
+	left: 0;
+	bottom: 100rpx;
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
+	z-index: 100;
+}
+
+.coupon_bar text{
+	display: block;
+	width: 25rpx;
+	height: 23rpx;
+	background-image: url('https://qncdn.playonwechat.com/hepulanhufu/up_icon.png');
+	background-size: 100% 100%;
+	margin-left: 30rpx;
+}
+
+.closeopen text{
+    transform: rotate(180deg);
+}
+
+.coupon_box{
+	width:100%;
+	background: #fff;
+	padding:0 30rpx;
+  max-height: 480rpx;
+	position: absolute;
+	bottom: -500rpx;
+	left: 0;
+  border-top: 1px solid rgba(0, 0, 0, .05);
+}
+
+.coupon_box .top_nav{
+	width:100%;
+	display: flex;
+	justify-content: space-between;
+	padding:20rpx;
+	font-size: 24rpx;
+}
+
+.coupon_view{
+	background: #f7f7f7;
+	box-sizing: border-box;
+	padding:16rpx;
+	overflow-y: scroll;
+}
+
+.coupon{
+	width:544rpx;
+	height: 162rpx;
+	background: url('https://qncdn.playonwechat.com/hepulanhufu/mycoupon-card-bg.png');
+	background-size:100% 100%;
+	display: flex;
+}
+
+.coupon-item{
+	display: flex;
+	margin:10rpx 0;
+}
+
+.coupon-item:last-child{
+	display: flex;
+	margin-bottom: 100rpx;
+}
+
+.coupon .coupon_left{
+	width: 140rpx;
+	height: 162rpx;
+	color: #dd5347;
+}
+
+.coupon .left_top{
+	padding-top: 30rpx;
+	box-sizing: border-box;
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+}
+
+.coupon .left_top .sign {
+    font-size: 20rpx;
+}
+
+.coupon .left_top .money{
+	font-size: 50rpx;
+}
+
+.coupon .left_bottom{
+	font-size: 17rpx;
+	text-align: center;
+}
+
+.coupon .coupon_right{
+	flex:1;
+	padding-right: 14rpx;
+}
+
+.coupon .coupon_right .right_top{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 20rpx;
+}
+
+.coupon .coupon_right .title{
+	font-size: 25rpx;
+	color: #dd5347;
+}
+
+.coupon .coupon_right .right_top .right_time{
+	font-size: 16rpx;
+	color: #dd5347;
+}
+
+.coupon .coupon_right .tip{
+	font-size: 20rpx;
+	display: inline-block;
+	margin-left: 20rpx;
+	color: #9fa0a0;
+}
+
+.coupon .coupon_right .coupon_tip{
+	font-size: 15rpx;
+	margin-top: 12rpx;
+	margin-bottom: 30rpx;
+}
+
+.coupon .right_bottom{
+	font-size: 17rpx;
+}
+
+.select{
+	flex:1;
+	margin-right: -20rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.select_tip{
+	font-size: 20rpx;
+	color: #393939;
+	margin-top: 14rpx;
+}
+
+.input-view{
+	width: 100%;
+	padding:10rpx 0;
+}
+
+.input-view input{
+	background: #fff;
+	font-size: 26rpx;
+	box-sizing: border-box;
+	padding: 0 20rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+}
+
+/* 没有输入兑换码提示弹窗 */
+.exchange-code{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	z-index: 101;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.code-win{
+	width: 600rpx;
+	min-height: 300rpx;
+	background-color: #fff;
+	border-radius: 10rpx;
+	padding-top: 50rpx;
+	position: relative;
+}
+
+.code-win .icon{
+   width: 200rpx;
+   margin:0 auto;
+   display: block;
+}
+
+.code-win .text{
+	padding: 40rpx 60rpx;
+	font-size: 28rpx;
+	line-height: 40rpx;
+	text-align: center;
+}
+
+.ask-code{
+	width: 500rpx;
+	font-size: 29rpx;
+	background: #50a76f;
+	color: #fff;
+	border-radius: 50rpx;
+	margin-bottom: 50rpx;
+}
+
+.ask-code::after{
+	display: none;
+}
+
+.close-code{
+	color: #000;
+	position: absolute;
+	right: 20rpx;
+	top: 20rpx;
+	width: 21px;
+	height: 21px;
+}
+
+.close-code::before{
+	content: '';
+  position: absolute;
+  top: 10px;
+  width: 21px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.close-code:after{
+	content: '';
+  position: absolute;
+  top: 10px;
+  width: 21px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* 红包口令弹层 */
+.kouling{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .3);
+	z-index: 102;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.kouling-in{
+	width: 600rpx;
+	min-height: 300rpx;
+	background: #fff;
+	border-radius: 10rpx;
+  padding-bottom: 20rpx;
+  position: relative;
+}
+
+.kouling-icon{
+	width: 200rpx;
+	display: block;
+	margin:0 auto;
+}
+
+.kouling-title{
+	text-align: center;
+	padding:20rpx 0;
+}
+
+.kouling-input{
+	height: 60rpx;
+	margin: 20rpx auto 10rpx auto;
+}
+
+.kouling-input input{
+	display: block;
+	width: 400rpx;
+	height: 100%;
+	border: 1px solid #333;
+	border-radius: 10rpx;
+	padding: 0 20rpx;
+	margin:0 auto;
+}
+
+.input-tips{
+	font-size: 24rpx;
+	text-align: center;
+	color: #999;
+	margin-bottom: 50rpx;
+}
+
+.save-kouling{
+	border-radius: 50rpx;
+	background:#52a672;
+	color: #fff;
+	height: 60rpx;
+	margin:20rpx auto;
+	line-height: 60rpx;
+	width: 450rpx;
+}
+
+.close-kouling{
+color: #000;
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  width: 21px;
+  height: 21px;
+}
+
+.close-kouling:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 21px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.close-kouling:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 21px;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}

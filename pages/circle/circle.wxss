@@ -1,0 +1,384 @@
+/* pages/circle/circle.wxss */
+.container{
+	width: 100%;
+  height: 100vh;
+	margin: 0;
+	line-height: 1;
+	font-size: 30rpx;
+	box-sizing: border-box;
+	position: absolute;
+	background-color: #f8f8f8;
+}
+
+.search_box{
+	width: 700rpx;
+	height: 88rpx;
+	margin:30rpx auto;
+	background: rgba(0,0,0,.2);
+	border-radius: 6rpx;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+.search_box input{
+	background: transparent;
+	height: 88rpx;
+	color: #fff;
+	box-sizing: border-box;
+	padding:0 20rpx;
+	flex:1;
+}
+
+.search_box .search_btn{
+	width: 100rpx;
+	background: url(https://qncdn.playonwechat.com/hepulan/circle_search_icon.png);
+	background-size: 44rpx 44rpx;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.nav_box{
+	width: 750rpx;
+	height: 544rpx;
+	background: #666;
+	background: url(https://qncdn.playonwechat.com/hepulan/circle_bg.png);
+	background-size: 750rpx 396rpx;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	border:1px solid #fff;
+	box-sizing: border-box;
+}
+
+.nav_in{
+	width: 700rpx;
+	height: 178rpx;
+	display: flex;
+	justify-content: space-around;
+	background: #fff;
+	margin:0 auto;
+	margin-top: 320rpx;
+	border-radius: 20rpx;
+	align-items: center;
+	box-shadow: 0 0 10rpx rgba(0,0,0,.1);
+}
+
+.nav_in view{
+	flex:1;
+	position: relative;
+}
+
+.nav_in .nav_active:before{
+    content: "";
+    display: block;
+    width: 40rpx;
+    height: 3px;
+    border-radius: 10rpx;
+    background-color: #81ce94;
+    bottom: -10rpx;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav_in image{
+	width: 110rpx;
+	height: 90rpx;
+	display: block;
+	margin:0 auto;
+	margin-bottom: 14rpx;
+}
+
+.nav_in text{
+	font-size: 28rpx;
+	display: block;
+	text-align: center;
+}
+
+.user_img image{
+	display: block;
+	width: 86rpx;
+	height: 86rpx;
+}
+
+.space_dyn{
+	display: flex;
+	box-sizing: border-box;
+  padding: 18rpx 28rpx;
+	background-color: #fff;
+	box-shadow:2px 2px 5px #eee;
+	position: relative;
+	width: 100vw;
+}
+
+.space_dyn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #c8c7cc;
+  -webkit-transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+  pointer-events: none;
+}
+
+.space_content{
+  padding-left: 29rpx;
+	flex: 1;
+  box-sizing: border-box;
+}
+
+.user_name{
+	margin: 8rpx 0 16rpx 0;
+	font-size: 36rpx;
+	color: #596d96;
+}
+
+.content_view{
+	line-height: 1.5;
+	font-size: 34rpx;
+}
+
+.content_img{
+	display: flex;
+	margin: 8rpx 0 0 0;
+	flex-wrap:wrap;
+}
+
+.content_img image{
+	display: block;
+	width: 172rpx;
+	height: 172rpx;
+	margin: 5rpx;
+}
+
+.discuss_box{
+	display: flex;
+	font-size: 34rpx;
+	margin:28rpx 0 20rpx 0;
+	justify-content: space-between;
+}
+
+.write_time{
+	color: #999;
+	font-size: 30rpx;
+}
+
+.discuss_opation{
+	display: flex;
+	align-items: center;
+}
+
+.like_btn{
+	width: 36rpx;
+	height: 36rpx;
+	padding:0 5rpx;
+	vertical-align: middle;
+	display: inline-block;
+	background-size: 36rpx;
+	background-repeat: no-repeat;
+	background-image:url('https://qncdn.playonwechat.com/hepulan/circle_heart_icon.png');
+}
+
+.like_btn_selsct{
+	width: 36rpx;
+	height: 36rpx;
+	line-height: 36rpx;
+	padding:0 5rpx;
+	vertical-align: middle;
+	display: inline-block;
+	background-size: 36rpx;
+	background-repeat: no-repeat;
+	background-image:url('https://qncdn.playonwechat.com/hepulan/circle_heart_icon_active.png');
+}
+
+.discuss_btn{
+	display: inline-block;
+	line-height: 36rpx;
+	vertical-align: middle;
+}
+
+.like_box{
+	margin-right: 28rpx;
+}
+
+.discuss_btn image{
+	width: 36rpx;
+	height: 36rpx;
+	padding:0 10rpx;
+	display: inline-block;
+}
+
+.diss_bx,.like_box{
+	display: flex;
+	align-items: center;
+}
+
+.diss_win{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background:rgba(0,0,0,.1);
+}
+
+.write_box{
+	width: 750rpx;
+	height: 560rpx;
+	background:#fff;
+	margin:0 auto;
+	box-sizing: border-box;
+	padding: 20rpx;
+	font-size: 34rpx;
+}
+
+.write_box textarea{
+	display: block;
+	width: 96%;
+	margin:0 auto;
+	min-height: 240rpx;
+	box-sizing: border-box;
+	padding: 20rpx;
+	background: #f7f7f7;
+}
+
+.comment{
+	position: relative;
+	box-sizing: border-box;
+	padding: 30rpx 0;
+}
+
+.item_tag image{
+	display: block;
+	width: 34rpx;
+	height: 34rpx;
+}
+
+.item_tag{
+	display: flex;
+	align-items: center;
+	font-size: 28rpx;
+	position: absolute;
+	right: 30rpx;
+	top: 20rpx;
+}
+
+
+/*.comment::before{
+	content: " ";
+	display: block;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-bottom: 1px solid red;
+	transform: translateY(.5);
+	transform-origin: 0 0;
+}*/
+
+.diss_input_opa{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.diss_input_cencel{
+	color: #666;
+	box-sizing: border-box;
+	padding: 30rpx 6rpx;
+}
+
+.diss_input_sure{
+	color: #09ba07;
+	padding: 30rpx 6rpx;
+	margin-left: 40rpx;
+}
+
+.persion_diss{
+	background-color: #f4f4f4;
+	box-sizing: border-box;
+	position: relative;
+}
+
+/*.persion_diss:before {
+  content: "";
+  position: absolute;
+  bottom: top;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid rgba(200,199,204,.4);
+  -webkit-transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+  pointer-events: none;
+}*/
+
+.persion_diss .diss_item:nth-of-type(1){
+	padding:10rpx 0;
+}
+
+.persion_diss .diss_item:nth-of-type(1):before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+    transform: scaleY(.5);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.persion_diss .diss_item{
+	margin-left: 15rpx;
+	line-height: 1;
+	font-size: 28rpx;
+	position: relative;
+}
+
+.persion_diss .diss_item:last-of-type{
+	padding-bottom:15rpx;
+}
+
+.like_persion{
+	font-size: 28rpx;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  box-sizing: border-box;
+  line-height: 1.8;
+	padding-left: 15rpx;
+  background:#f4f4f4;
+}
+
+.like_persion .like_item{
+	display: -webkit-box;
+	margin-right: 10rpx;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	color:#0f699e;
+}
+
+.write_dyn{
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	background: #365742;
+	position: fixed;
+	right: 80rpx;
+	bottom: 100rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.write_dyn image{
+	display: block;
+	width: 60rpx;
+	height: 60rpx;
+}
