@@ -126,7 +126,7 @@ page {
 .perison-item .is_header {
     font-size: 20rpx;
     display: inline-block;
-    padding: 5rpx 10rpx;
+    padding: 5rpx;
     background: #f2a72b;
     color: #fff;
     border-radius: 20rpx;
@@ -134,6 +134,8 @@ page {
     position: absolute;
     top: 70rpx;
     left: 40rpx;
+    min-width: 55rpx;
+    text-align: center;
 }
 
 .invite-tip {

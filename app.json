@@ -56,7 +56,7 @@
     "navigationBarBackgroundColor": "#1b1a20",
     "navigationBarTitleText": "禾葡兰护肤中心",
     "navigationBarTextStyle": "white"
-  },
+    },
   "tabBar": {
     "backgroundColor": "#1b1a20",
     "color": "#fff",

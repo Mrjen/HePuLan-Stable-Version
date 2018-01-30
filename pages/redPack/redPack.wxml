@@ -260,9 +260,8 @@
             <view class="rule-content">2) 每个红包发起后24小时未满4人即失败，无红包奖励。</view>
             <view class="rule-content">3) 活动期间，不能帮同一好友拆多次，但发起拆红包次数不限。 </view>
             <view class="rule-content">4) 发起拆红包的用户需在该红包满4人拆成功或逾期失败后，才可在发起拆下一个红包。</view>
-            <view class="rule-content">5) 一起拆红包活动的红包均为积分兑换券；本次活动期间，每个用户通过一起拆红包获得的红包总和最多不超过800元。</view>
-            <view class="rule-content">6) 使用红包积分时，需要填写当日“红包口令”,“红包口令”找禾葡兰护肤老师即可获得。</view>
-            <view class="rule-content">7) 禾葡兰对该活动规则保留最终解释权。</view>
+            <view class="rule-content">5) 使用红包积分时，需要填写当日“红包口令”,“红包口令”找禾葡兰护肤老师即可获得。</view>
+            <view class="rule-content">6) 禾葡兰对该活动规则保留最终解释权。</view>
         </view>
     </view>
     <view class="invite_tip" wx:if="{{inviteTip}}">您的红包还差{{couponInfo.coupon_need_more}}人,才能拆开，别忘了邀请好友一起拆哦！</view>
