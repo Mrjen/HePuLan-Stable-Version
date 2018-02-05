@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/photoWall/photoWall",
     "pages/shopSubmiteOrder/shopSubmiteOrder",
+    
+    "pages/photoWall/photoWall",
     "pages/pointMallCar/pointMallCar",
     "pages/pointMall/pointMall",
     "pages/applyDetail/applyDetail",

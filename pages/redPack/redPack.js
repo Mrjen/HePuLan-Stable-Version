@@ -314,7 +314,7 @@ Page({
       } else {
         wx.showModal({
           title: '领取失败',
-          content: '您已经拆过该好友的红包了哦,是否自己拆红包？',
+          content: params.data.msg,
           success: function (res) {
             if (res.confirm) {
               console.log('用户点击确定');
@@ -435,6 +435,7 @@ Page({
   onShow: function () {
     let that = this;
     console.log('onShow')
+    // 获取商城数据
     http({
       type: 'get-goods-list',
       data: {
@@ -448,6 +449,21 @@ Page({
         shopSoonList: res.data.data.goods_list_soon,
         shopBeforeList: res.data.data.goods_list_before
       })
+    })
+
+    // 获取红包规则
+    http({
+      type:'get-options-by-code',
+      data:{
+        option_key:'ylhb_rule'
+      }
+    },function(res){
+      console.log('获取规则', res.data.data.option_info.option_value)
+      let rule = res.data.data.option_info.option_value
+          rule = rule.split('|');
+          that.setData({
+            redPackRuleContent: rule
+          })
     })
   },
 

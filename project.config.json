@@ -25,20 +25,21 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,
 					"name": "从别人分享进入",
 					"pathName": "pages/redPack/redPack",
-					"query": "unique_code=5a65b602691fc",
+					"query": "unique_code=5a77b1fb7722c",
 					"scene": "1014"
 				},
 				{
 					"id": 1,
 					"name": "测试上报数据",
 					"pathName": "pages/index/index",
-					"query": "scene=cf6e564d335c018c58a2a1adf36a7ed7"
+					"query": "scene=f471fa77239ed19152354cdd0c356003",
+					"scene": "1014"
 				},
 				{
 					"id": 2,

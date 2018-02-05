@@ -86,7 +86,7 @@
 /*轮播*/
 .swiper{
   width: 750rpx;
-  height: 416rpx;
+  height: 420rpx;
 }
 
 .swiper swiper-item image{
